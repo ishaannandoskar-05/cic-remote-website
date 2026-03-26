@@ -1,0 +1,197 @@
+
+.brand{
+  font-weight: 700;
+  letter-spacing: .6px;
+  color: #000000;
+  font-size: 18px;
+}
+
+
+.nav-link:hover{
+  background: rgba(255,255,255,0.04);
+}
+
+.app-container{
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+
+.page-title{
+  margin: 0 0 12px 0;
+  font-size: 20px;
+  color: #1B3C53;
+}
+
+/* Background */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: #e2e8f0;
+}
+
+/* Center container */
+.card-holder {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.card-internal{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* Card */
+.card {
+  width: 70%;
+  max-width: 900px;
+  height: 50%;
+  padding: 32px;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+
+  /* Glassmorphism */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  /* Glow + depth */
+  box-shadow: 
+    0 10px 40px rgba(0, 0, 0, 0.6),
+    0 0 30px rgba(56, 189, 248, 0.1);
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover lift effect */
+.card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.8),
+    0 0 40px rgba(56, 189, 248, 0.2);
+}
+
+/* Status */
+.status {
+  margin-top: 12px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+
+  background: rgba(56, 189, 248, 0.1);
+  color: #38bdf8;
+
+  border: 1px solid rgba(56, 189, 248, 0.2);
+
+  animation: fadeIn 0.4s ease;
+}
+
+/* Button (Main Glow Button) */
+.button{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px 28px;
+  border-radius: 999px;
+  border: none;
+
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  box-shadow: 0 8px 25px rgba(56, 189, 248, 0.4);
+}
+
+/* Hover effect */
+.button:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 12px 40px rgba(99, 102, 241, 0.6);
+}
+
+/* Click effect */
+.button:active {
+  transform: scale(0.95);
+}
+
+/* Icon animation */
+.icon {
+  width: 22px;
+  height: 22px;
+  transition: transform 0.3s ease;
+}
+
+.button:hover .icon {
+  transform: translateX(4px);
+}
+
+/* Text */
+.text {
+  letter-spacing: 0.5px;
+}
+
+/* Smooth fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.video-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+video{
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(3,7,18,0.6);
+  scrollbar-width: none;
+}
+
+.app-footer{
+  text-align: center;
+  padding: 12px 8px;
+  font-size: 13px;
+  color: #8fb1c4;
+}
+
+
+.text {
+  transition: all 0.5s ease-in-out;
+}
+
+h2{
+  color: #cfeffd;
+  text-align: center;
+}
+
+*{
+  scrollbar-width: none;
+}
+
+body{
+  background-color: #0f172a;
+}
