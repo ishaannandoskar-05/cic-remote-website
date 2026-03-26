@@ -5,7 +5,7 @@ const app = express();
 
 // ✅ Updated CORS to only allow your Vercel frontend
 app.use(cors({
-  origin: "https://cic-remote-website.vercel.app"
+  origin: "https://cic-remote-website-bice.vercel.app"
 }));
 
 app.use(express.json());
