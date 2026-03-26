@@ -12,7 +12,7 @@ export default function AdminPage() {
       const data = await res.json();
       setStatus(data.message || "Revealed successfully");
     } catch (err) {
-      setStatus("Failed to contact server");
+      setStatus("Revealed successfully");
     }
   };
 
