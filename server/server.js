@@ -2,7 +2,12 @@ const express = require('express');
 const cors = require('cors');
 
 const app = express();
-app.use(cors());
+
+// ✅ Updated CORS to only allow your Vercel frontend
+app.use(cors({
+  origin: "https://cic-remote-website.vercel.app"
+}));
+
 app.use(express.json());
 
 // 🔐 Global state (in-memory for now)
@@ -19,6 +24,8 @@ app.get('/reveal', (req, res) => {
   res.json({ reveal });
 });
 
-app.listen(5000, () => {
-  console.log('Server running on http://localhost:5000');
+// ✅ Dynamic PORT for Render
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
