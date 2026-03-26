@@ -5,7 +5,7 @@ export default function UserPage() {
 
   useEffect(() => {
     const fetchReveal = async () => {
-      const res = await fetch("http://localhost:5000/reveal");
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/reveal`);
       const data = await res.json();
       setReveal(Boolean(data.reveal));
     };

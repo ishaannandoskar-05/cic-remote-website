@@ -6,7 +6,7 @@ export default function AdminPage() {
   const handleReveal = async () => {
     try {
       setStatus("Sending reveal...");
-      const res = await fetch("http://localhost:5000/reveal", {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/reveal`, {
         method: "POST",
       });
       const data = await res.json();
