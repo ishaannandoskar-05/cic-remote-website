@@ -10,6 +10,7 @@ export default function AdminPage() {
         method: "POST",
       });
       const data = await res.json();
+      console.log(data.message)
       setStatus(data.message || "Revealed successfully");
     } catch (err) {
       setStatus("Revealed successfully");
